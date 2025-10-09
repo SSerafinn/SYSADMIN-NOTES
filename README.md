@@ -724,7 +724,7 @@ Group membership is checked when accessing files. If you're trying to access a f
 
 Understanding precedence is critical: **Owner permissions are checked first**, and if you're the owner, only owner permissions matter—even if group permissions would grant more access!
 
-Consider a file with permissions 600 (owner: rw-, group: rwx, others: ---). If you own the file, you get rw- even though the group has rwx. You cannot execute the file even though group members can, because you're the owner, not a mere group member.
+Consider a file with permissions 670 (owner: rw-, group: rwx, others: ---). If you own the file, you get rw- even though the group has rwx. You cannot execute the file even though group members can, because you're the owner, not a mere group member.
 
 This sometimes confuses administrators, but it makes sense: ownership grants control, and the owner's explicit permissions take precedence over group membership.
 
